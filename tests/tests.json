@@ -1,0 +1,73 @@
+[
+  {
+    "name": "Explore the academic portfolio and filter publications",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": [
+      "homepage navigation",
+      "research section",
+      "publication search",
+      "publication filtering"
+    ],
+    "description": "Verifies the core portfolio navigation and publication discovery experience.",
+    "steps": [
+      "Open the homepage",
+      "Use the navigation to open Publications",
+      "Search for a publication keyword",
+      "Change the publication year filter"
+    ],
+    "expected": "The page navigates to the selected section and the publication list updates to match the search and year filter."
+  },
+  {
+    "name": "Switch theme and use mobile navigation",
+    "viewport": "mobile",
+    "covers": ["light and dark theme", "mobile menu", "responsive navigation"],
+    "description": "Verifies theme switching and navigation on a mobile viewport.",
+    "steps": [
+      "Open the site at a mobile viewport",
+      "Open the mobile navigation menu",
+      "Select Research",
+      "Switch between light and dark themes"
+    ],
+    "expected": "Research is brought into view, the mobile menu closes, and the selected theme is visibly applied."
+  },
+  {
+    "name": "Validate the collaboration contact form",
+    "viewport": "desktop",
+    "covers": ["contact form validation", "honest contact handoff"],
+    "description": "Verifies required fields and that the contact flow does not falsely claim a message was sent.",
+    "steps": [
+      "Navigate to Contact",
+      "Submit the form with required fields empty",
+      "Enter valid name, email, subject, and message",
+      "Submit the completed form"
+    ],
+    "expected": "Required-field validation is shown for incomplete input; a completed form opens the user's email application with a prepared message and explains the handoff."
+  },
+  {
+    "name": "Use publication filters with no matching results",
+    "viewport": "desktop",
+    "covers": ["empty publication search state", "filter reset"],
+    "description": "Verifies that an unmatched search shows a helpful empty state and can be cleared.",
+    "steps": [
+      "Navigate to Publications",
+      "Search for a deliberately unmatched phrase",
+      "Observe the empty state",
+      "Clear the search"
+    ],
+    "expected": "A clear no-results message appears, and clearing the search restores the available publication-state information."
+  },
+  {
+    "name": "Open verified external academic profiles",
+    "viewport": "mobile",
+    "covers": ["Google Scholar link", "ResearchGate link", "LinkedIn link", "African Academy of Sciences link", "AD Scientific Index link"],
+    "description": "Verifies the profile section provides direct external links to the five scholarly and professional resources.",
+    "steps": [
+      "Navigate to the Academic Profile section",
+      "Locate the Academic Presence panel",
+      "Check that Google Scholar, ResearchGate, LinkedIn, African Academy of Sciences, and AD Scientific Index links are visible",
+      "Open one profile link"
+    ],
+    "expected": "All five profile links are visible and each points to the corresponding external profile."
+  }
+]
